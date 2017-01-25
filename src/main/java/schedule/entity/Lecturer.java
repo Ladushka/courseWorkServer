@@ -1,14 +1,18 @@
 package schedule.entity;
 
+import com.mysql.cj.mysqlx.protobuf.MysqlxDatatypes;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "lecture")
+//@javax.persistence.Table(name = "lecture")
 public class Lecturer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "lecture_id", nullable = false)
+    //@javax.persistence.Column(name = "lecture_id", nullable = false, insertable = true, updatable = true)
     private Integer lecture_id;
 
     @Column(name = "name", nullable = false)

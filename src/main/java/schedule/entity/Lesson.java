@@ -5,11 +5,13 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "lesson")
+//@javax.persistence.Table(name = "lesson")
 public class Lesson {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id",nullable = false)
+   // @javax.persistence.Column(name = "id", nullable = false, insertable = true, updatable = true)
     private Integer id;
 
     @Column(name = "subject_name",nullable = false)

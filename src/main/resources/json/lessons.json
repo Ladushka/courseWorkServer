@@ -1,0 +1,128 @@
+[
+    {
+        "id": 1,
+        "subject_name": "МИИ",
+        "lecturer": {
+            "lecture_id": 5,
+            "name": "Елена",
+            "surname": "Корчевская",
+            "patronymic": "Алексеевна",
+            "login": "elena"
+        },
+        "group": {
+            "group_id": 5,
+            "number": 41,
+            "faculty": "МиИТ"
+        },
+        "day_of_week": "Среда",
+        "number_of_lesson": 1,
+        "lecture_hall": "119",
+        "type": "лекция",
+        "subgroup_number": 0
+    },
+    {
+        "id": 2,
+        "subject_name": "МИИ",
+        "lecturer": {
+            "lecture_id": 5,
+            "name": "Елена",
+            "surname": "Корчевская",
+            "patronymic": "Алексеевна",
+            "login": "elena"
+        },
+        "group": {
+            "group_id": 6,
+            "number": 43,
+            "faculty": "МиИТ"
+        },
+        "day_of_week": "Среда",
+        "number_of_lesson": 1,
+        "lecture_hall": "119",
+        "type": "лекция",
+        "subgroup_number": 0
+    },
+    {
+        "id": 3,
+        "subject_name": "МИИ",
+        "lecturer": {
+            "lecture_id": 5,
+            "name": "Елена",
+            "surname": "Корчевская",
+            "patronymic": "Алексеевна",
+            "login": "elena"
+        },
+        "group": {
+            "group_id": 6,
+            "number": 43,
+            "faculty": "МиИТ"
+        },
+        "day_of_week": "Пятница",
+        "number_of_lesson": 1,
+        "lecture_hall": "119",
+        "type": "практика",
+        "subgroup_number": 2
+    },
+    {
+        "id": 4,
+        "subject_name": "KTMS",
+        "lecturer": {
+            "lecture_id": 4,
+            "name": "Вадим",
+            "surname": "Новый",
+            "patronymic": "Владимирович",
+            "login": "linux forever"
+        },
+        "group": {
+            "group_id": 5,
+            "number": 41,
+            "faculty": "МиИТ"
+        },
+        "day_of_week": "Пятница",
+        "number_of_lesson": 3,
+        "lecture_hall": "306",
+        "type": "практика",
+        "subgroup_number": 1
+    },
+    {
+        "id": 5,
+        "subject_name": "Cache",
+        "lecturer": {
+            "lecture_id": 6,
+            "name": "Ольга",
+            "surname": "Казанцева",
+            "patronymic": "Геннадьевна",
+            "login": "helga"
+        },
+        "group": {
+            "group_id": 7,
+            "number": 31,
+            "faculty": "МиИТ"
+        },
+        "day_of_week": "Пятница",
+        "number_of_lesson": 2,
+        "lecture_hall": "534",
+        "type": "лекция",
+        "subgroup_number": 0
+    },
+    {
+        "id": 6,
+        "subject_name": "Cache",
+        "lecturer": {
+            "lecture_id": 6,
+            "name": "Ольга",
+            "surname": "Казанцева",
+            "patronymic": "Геннадьевна",
+            "login": "helga"
+        },
+        "group": {
+            "group_id": 6,
+            "number": 43,
+            "faculty": "МиИТ"
+        },
+        "day_of_week": "Пятница",
+        "number_of_lesson": 2,
+        "lecture_hall": "534",
+        "type": "лекция",
+        "subgroup_number": 0
+    }
+]

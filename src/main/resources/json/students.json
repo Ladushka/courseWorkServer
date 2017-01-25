@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Владислава",
+    "surname": "Жданова",
+    "patronymic": "Сергеевна",
+    "sdo_id": 1301080051,
+    "group": {
+      "group_id": 5,
+      "number": 41,
+      "faculty": "МиИТ"
+    },
+    "subgroup_number": 1
+  },
+  {
+    "id": 2,
+    "name": "Алексей",
+    "surname": "Каторец",
+    "patronymic": "Фёдорович",
+    "sdo_id": 1301080081,
+    "group": {
+      "group_id": 5,
+      "number": 41,
+      "faculty": "МиИТ"
+    },
+    "subgroup_number": 1
+  },
+  {
+    "id": 4,
+    "name": "Дмитрий",
+    "surname": "Наследников",
+    "patronymic": null,
+    "sdo_id": 1301080056,
+    "group": {
+      "group_id": 6,
+      "number": 43,
+      "faculty": "МиИТ"
+    },
+    "subgroup_number": 2
+  }
+]
