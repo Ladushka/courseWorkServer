@@ -2,6 +2,7 @@ package schedule.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import schedule.entity.Group;
 import schedule.entity.Lesson;
 import schedule.entity.form.LessonForm;
@@ -9,7 +10,9 @@ import schedule.repository.GroupRepository;
 import schedule.repository.LecturerRepository;
 import schedule.repository.LessonRepository;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Service("lessonService")
 public class LessonService {
@@ -36,11 +39,11 @@ public class LessonService {
         return lessonRepository.save(lesson);
     }
 
-    public Lesson findOne(Integer id){
+    public Lesson findOne(Integer id) {
         return lessonRepository.findOne(id);
     }
 
-    public List<Lesson> findAll(){
+    public List<Lesson> findAll() {
         return lessonRepository.findAll();
     }
 
@@ -49,8 +52,14 @@ public class LessonService {
     }
 
     public List<Lesson> findByGroup(Integer group_id) {
-        Group group=new Group();
+        Group group = new Group();
         group.setGroup_id(group_id);
         return lessonRepository.findByGroup(group);
+    }
+
+    @Transactional
+    public List<Lesson> findByFacultyAndNumber(String faculty, Integer number) {
+        Optional<Group> optional = groupRepository.findByFacultyAndNumber(faculty, number).stream().findFirst();
+        return optional.isPresent() ? lessonRepository.findByGroup(optional.get()) : Collections.emptyList();
     }
 }

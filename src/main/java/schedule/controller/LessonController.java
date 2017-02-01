@@ -26,12 +26,12 @@ public class LessonController {
 
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<Lesson>>getAll(){
+    public ResponseEntity<List<Lesson>> getAll() {
         return new ResponseEntity<>(lessonService.findAll(), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Lesson>get(@PathVariable("id") Integer id){
+    public ResponseEntity<Lesson> get(@PathVariable("id") Integer id) {
         return new ResponseEntity<>(lessonService.findOne(id), HttpStatus.OK);
     }
 
@@ -44,5 +44,10 @@ public class LessonController {
     @RequestMapping(value = "/group/{group_id}", method = RequestMethod.GET)
     public ResponseEntity<List<Lesson>> getByGroup(@PathVariable("group_id") Integer group_id) {
         return new ResponseEntity<>(lessonService.findByGroup(group_id), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/faculty/{faculty}/group/{number}", method = RequestMethod.GET)
+    public ResponseEntity<List<Lesson>> findByFacultyAndNumber(@PathVariable("faculty") String faculty, @PathVariable("number") Integer number) {
+        return new ResponseEntity<>(lessonService.findByFacultyAndNumber(faculty, number), HttpStatus.OK);
     }
 }
