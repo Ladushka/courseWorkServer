@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "role": "преподаватель",
+    "password": "123456",
+    "sdo_id": 1,
+    "login": "boss"
+  },
+  {
+    "id": 2,
+    "role": "преподаватель",
+    "password": "123456",
+    "sdo_id": 2,
+    "login": "linux forever"
+  },
+  {
+    "id": 3,
+    "role": "преподаватель",
+    "password": "123456",
+    "sdo_id": 3,
+    "login": "zlodeyushka"
+  },
+  {
+    "id": 4,
+    "role": "преподаватель",
+    "password": "123456",
+    "sdo_id": 4,
+    "login": "elena"
+  },
+  {
+    "id": 5,
+    "role": "преподаватель",
+    "password": "123456",
+    "sdo_id": 5,
+    "login": "helga"
+  },
+  {
+    "id": 6,
+    "role": "student",
+    "password": "123456",
+    "sdo_id": 1301080051,
+    "login": "JIada"
+  },
+  {
+    "id": 7,
+    "role": "student",
+    "password": "123456",
+    "sdo_id": 1301080081,
+    "login": "Ham"
+  },
+  {
+    "id": 8,
+    "role": "student",
+    "password": "123456",
+    "sdo_id": 1301080056,
+    "login": "dvoeshnik"
+  }
+]

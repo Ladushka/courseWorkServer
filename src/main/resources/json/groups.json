@@ -1,0 +1,27 @@
+[
+  {
+    "group_id": 4,
+    "number": 21,
+    "faculty": "БФ"
+  },
+  {
+    "group_id": 5,
+    "number": 41,
+    "faculty": "МиИТ"
+  },
+  {
+    "group_id": 6,
+    "number": 43,
+    "faculty": "МиИТ"
+  },
+  {
+    "group_id": 7,
+    "number": 31,
+    "faculty": "МиИТ"
+  },
+  {
+    "group_id": 8,
+    "number": 33,
+    "faculty": "МиИТ"
+  }
+]

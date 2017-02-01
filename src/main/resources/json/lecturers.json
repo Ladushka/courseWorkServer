@@ -1,0 +1,37 @@
+[
+  {
+    "lecture_id": 1,
+    "name": "Сергей",
+    "surname": "Ермоченко",
+    "patronymic": "Александрович",
+    "login": "boss"
+  },
+  {
+    "lecture_id": 2,
+    "name": "Сергей",
+    "surname": "Сергеенко",
+    "patronymic": "Владимирович",
+    "login": "zlodeyushka"
+  },
+  {
+    "lecture_id": 4,
+    "name": "Вадим",
+    "surname": "Новый",
+    "patronymic": "Владимирович",
+    "login": "linux forever"
+  },
+  {
+    "lecture_id": 5,
+    "name": "Елена",
+    "surname": "Корчевская",
+    "patronymic": "Алексеевна",
+    "login": "elena"
+  },
+  {
+    "lecture_id": 6,
+    "name": "Ольга",
+    "surname": "Казанцева",
+    "patronymic": "Геннадьевна",
+    "login": "helga"
+  }
+]
