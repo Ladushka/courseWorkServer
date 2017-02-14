@@ -35,9 +35,25 @@ public class UserController {
         return new ResponseEntity<>(userService.findOne(id), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/login/{login}", method = RequestMethod.GET)
+    public ResponseEntity<User>get(@PathVariable("login") String login){
+        return new ResponseEntity<>(userService.findByLogin(login), HttpStatus.OK);
+    }
+
+//    @RequestMapping(value = "/sdo/{sdo_id}", method = RequestMethod.GET)
+//    public ResponseEntity<User>get(@PathVariable("sdo_id") Long sdo_id){
+//        return new ResponseEntity<>(userService.findBySdoid(sdo_id), HttpStatus.OK);
+//    }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Boolean> delete(@PathVariable("id") Integer id) {
         userService.delete(id);
         return new ResponseEntity<>(Boolean.TRUE, HttpStatus.OK);
     }
+    /*
+     @RequestMapping(value = "/faculty/{faculty}", method = RequestMethod.GET)
+    public ResponseEntity<List<Group>> getByFaculty(@PathVariable("faculty") String faculty) {
+        return new ResponseEntity<>(groupService.findByFaculty(faculty), HttpStatus.OK);
+    }
+    * */
 }

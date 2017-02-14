@@ -20,6 +20,10 @@ public class UserService {
         return userRepository.findOne(id);
     }
 
+    public User findByLogin(String login){ return userRepository.findByLogin(login);}
+
+//    public User findBySdoid(Long sdo_id){ return userRepository.findBySdoid(sdo_id);}
+
     public List<User> findAll(){
         return userRepository.findAll();
     }
