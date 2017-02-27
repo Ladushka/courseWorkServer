@@ -32,4 +32,8 @@ public class GroupService {
         return groupRepository.findByFaculty(name);
     }
 
+    public List<Group> findByFacultyAndNumber(String faculty, Integer number) {
+        return groupRepository.findByFacultyAndNumber(faculty, number);
+    }
+
 }

@@ -4,4 +4,5 @@ import schedule.entity.Lecturer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface LecturerRepository extends JpaRepository<Lecturer, Integer> {
+    Lecturer findByLogin(String login);
 }

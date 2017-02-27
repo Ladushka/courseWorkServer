@@ -19,7 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/students")
 public class StudentController {
-    private Log bla=new SimpleLog(StudentController.class.getName());
+    private Log bla = new SimpleLog(StudentController.class.getName());
     @Autowired
     private StudentService studentService;
 
@@ -31,12 +31,12 @@ public class StudentController {
 
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<Student>>getAll(){
+    public ResponseEntity<List<Student>> getAll() {
         return new ResponseEntity<>(studentService.findAll(), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Student>get(@PathVariable("id") Integer id){
+    public ResponseEntity<Student> get(@PathVariable("id") Integer id) {
         return new ResponseEntity<>(studentService.findOne(id), HttpStatus.OK);
     }
 
@@ -50,4 +50,6 @@ public class StudentController {
     public ResponseEntity<List<Student>> getByGroup(@PathVariable("group_id") Integer group_id) {
         return new ResponseEntity<>(studentService.findByGroup(group_id), HttpStatus.OK);
     }
+
+
 }

@@ -43,4 +43,9 @@ public class GroupController {
         return new ResponseEntity<>(groupService.findByFaculty(faculty), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/faculty/{faculty}/number/{number}", method = RequestMethod.GET)
+    public ResponseEntity<List<Group>> getByFaculty(@PathVariable("faculty") String faculty, @PathVariable("number") Integer number) {
+        return new ResponseEntity<>(groupService.findByFacultyAndNumber(faculty,number), HttpStatus.OK);
+    }
+
 }

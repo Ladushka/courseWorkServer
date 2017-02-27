@@ -38,4 +38,9 @@ public class LecturerController {
         lectureService.delete(id);
         return new ResponseEntity<>(Boolean.TRUE, HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/login/{login}", method = RequestMethod.GET)
+    public ResponseEntity<Lecturer>get(@PathVariable("login") String login){
+        return new ResponseEntity<>(lectureService.findByLogin(login), HttpStatus.OK);
+    }
 }

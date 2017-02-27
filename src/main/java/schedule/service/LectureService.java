@@ -20,6 +20,10 @@ public class LectureService {
         return lecturerRepository.findOne(lecture_id);
     }
 
+    public Lecturer findByLogin(String login){
+        return lecturerRepository.findByLogin(login);
+    }
+
     public List<Lecturer> findAll(){
         return lecturerRepository.findAll();
     }
