@@ -20,14 +20,14 @@ public class Student {
     private String patronymic;
 
     @Column(name = "sdo_id", nullable = false)
-    private Long sdo_id;
+    private Long sdo;
 
     @ManyToOne
     @JoinColumn(name = "group_id", nullable = false)
     private Group group;
 
     @Column(name = "subgroup_number",nullable = false)
-    private Integer subgroup_number;
+    private Integer subgroup;
 
     public Integer getId() {
         return id;
@@ -61,12 +61,12 @@ public class Student {
         this.patronymic = patronymic;
     }
 
-    public Long getSdo_id() {
-        return sdo_id;
+    public Long getSdo() {
+        return sdo;
     }
 
-    public void setSdo_id(Long sdo_id) {
-        this.sdo_id = sdo_id;
+    public void setSdo(Long sdo) {
+        this.sdo = sdo;
     }
 
 
@@ -78,11 +78,11 @@ public class Student {
         this.group = group;
     }
 
-    public Integer getSubgroup_number() {
-        return subgroup_number;
+    public Integer getSubgroup() {
+        return subgroup;
     }
 
-    public void setSubgroup_number(Integer subgroup_number) {
-        this.subgroup_number = subgroup_number;
+    public void setSubgroup(Integer subgroup) {
+        this.subgroup = subgroup;
     }
 }

@@ -24,9 +24,9 @@ public class StudentService {
         student.setSurname(studentForm.getSurname());
         student.setName(studentForm.getName());
         student.setPatronymic(studentForm.getPatronymic());
-        student.setSdo_id(studentForm.getSdo_id());
+        student.setSdo(studentForm.getSdo());
         student.setGroup(groupRepository.findOne(studentForm.getGroup_id()));
-        student.setSubgroup_number(studentForm.getSubgroup_number());
+        student.setSubgroup(studentForm.getSubgroup());
         return studentRepository.save(student);
     }
 
@@ -46,5 +46,9 @@ public class StudentService {
         Group group=new Group();
         group.setGroup_id(group_id);
         return studentRepository.findByGroup(group);
+    }
+
+    public Student findBySdo(Long sdo){
+        return studentRepository.findBySdo(sdo);
     }
 }

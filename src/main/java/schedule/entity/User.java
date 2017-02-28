@@ -18,7 +18,7 @@ public class User {
     private String password;
 
     @Column(name = "sdo_id", nullable = false)
-    private Long sdo_id;
+    private Long sdo;
 
     @Column(name = "login", unique = true, nullable = false)
     private String login;
@@ -47,12 +47,12 @@ public class User {
         this.password = password;
     }
 
-    public Long getSdo_id() {
-        return sdo_id;
+    public Long getSdo() {
+        return sdo;
     }
 
-    public void setSdo_id(Long sdo_id) {
-        this.sdo_id = sdo_id;
+    public void setSdo(Long sdo) {
+        this.sdo = sdo;
     }
 
     public String getLogin() {

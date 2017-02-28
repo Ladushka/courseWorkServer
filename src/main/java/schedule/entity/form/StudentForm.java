@@ -5,9 +5,9 @@ public class StudentForm {
     private String name;
     private String surname;
     private String patronymic;
-    private Long sdo_id;
+    private Long sdo;
     private Integer group_id;
-    private Integer subgroup_number;
+    private Integer subgroup;
 
     public Integer getId() {
         return id;
@@ -41,12 +41,12 @@ public class StudentForm {
         this.patronymic = patronymic;
     }
 
-    public Long getSdo_id() {
-        return sdo_id;
+    public Long getSdo() {
+        return sdo;
     }
 
-    public void setSdo_id(Long sdo_id) {
-        this.sdo_id = sdo_id;
+    public void setSdo(Long sdo) {
+        this.sdo = sdo;
     }
 
     public Integer getGroup_id() {
@@ -57,12 +57,12 @@ public class StudentForm {
         this.group_id = group_id;
     }
 
-    public Integer getSubgroup_number() {
-        return subgroup_number;
+    public Integer getSubgroup() {
+        return subgroup;
     }
 
-    public void setSubgroup_number(Integer subgroup_number) {
-        this.subgroup_number = subgroup_number;
+    public void setSubgroup(Integer subgroup) {
+        this.subgroup = subgroup;
     }
 
     @Override
@@ -72,9 +72,9 @@ public class StudentForm {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", patronymic='" + patronymic + '\'' +
-                ", sdo_id=" + sdo_id +
+                ", sdo_id=" + sdo +
                 ", group=" + group_id +
-                ", subgroup_number=" + subgroup_number +
+                ", subgroup_number=" + subgroup +
                 '}';
     }
 }

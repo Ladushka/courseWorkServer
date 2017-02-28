@@ -35,7 +35,7 @@ public class LessonService {
         lesson.setGroup(groupRepository.findOne(lessonForm.getGroup_id()));
         lesson.setLecture_hall(lessonForm.getLecture_hall());
         lesson.setType(lessonForm.getType());
-        lesson.setSubgroup_number(lessonForm.getSubgroup_number());
+        lesson.setSubgroup(lessonForm.getSubgroup());
         return lessonRepository.save(lesson);
     }
 
@@ -62,4 +62,6 @@ public class LessonService {
         Optional<Group> optional = groupRepository.findByFacultyAndNumber(faculty, number).stream().findFirst();
         return optional.isPresent() ? lessonRepository.findByGroup(optional.get()) : Collections.emptyList();
     }
+
+
 }

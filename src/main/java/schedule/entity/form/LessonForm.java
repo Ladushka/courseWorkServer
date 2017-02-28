@@ -15,7 +15,7 @@ public class LessonForm {
     private Integer number_of_lesson;
     private String lecture_hall;
     private String type;
-    private Integer subgroup_number;
+    private Integer subgroup;
 
     public Integer getId() {
         return id;
@@ -81,11 +81,11 @@ public class LessonForm {
         this.type = type;
     }
 
-    public Integer getSubgroup_number() {
-        return subgroup_number;
+    public Integer getSubgroup() {
+        return subgroup;
     }
 
-    public void setSubgroup_number(Integer subgroup_number) {
-        this.subgroup_number = subgroup_number;
+    public void setSubgroup(Integer subgroup) {
+        this.subgroup = subgroup;
     }
 }

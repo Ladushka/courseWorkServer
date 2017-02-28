@@ -38,7 +38,7 @@ public class Lesson {
     private String type;
 
     @Column(name = "subgroup_number",nullable = false)
-    private Integer subgroup_number;
+    private Integer subgroup;
 
     public void setId(Integer id) {
         this.id = id;
@@ -106,11 +106,11 @@ public class Lesson {
         this.group = group;
     }
 
-    public Integer getSubgroup_number() {
-        return subgroup_number;
+    public Integer getSubgroup() {
+        return subgroup;
     }
 
-    public void setSubgroup_number(Integer subgroup_number) {
-        this.subgroup_number = subgroup_number;
+    public void setSubgroup(Integer subgroup) {
+        this.subgroup = subgroup;
     }
 }

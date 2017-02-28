@@ -51,5 +51,10 @@ public class StudentController {
         return new ResponseEntity<>(studentService.findByGroup(group_id), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/sdo/{sdo}", method = RequestMethod.GET)
+    public ResponseEntity<Student> getByGroup(@PathVariable("sdo") Long sdo) {
+        return new ResponseEntity<>(studentService.findBySdo(sdo), HttpStatus.OK);
+    }
+
 
 }

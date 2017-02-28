@@ -50,4 +50,6 @@ public class LessonController {
     public ResponseEntity<List<Lesson>> findByFacultyAndNumber(@PathVariable("faculty") String faculty, @PathVariable("number") Integer number) {
         return new ResponseEntity<>(lessonService.findByFacultyAndNumber(faculty, number), HttpStatus.OK);
     }
+
+
 }
