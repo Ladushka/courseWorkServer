@@ -31,4 +31,8 @@ public class LectureService {
     public void delete(Integer lecture_id) {
         lecturerRepository.delete(lecture_id);
     }
+
+    public List<Lecturer> findBySurname(String surname) {
+        return lecturerRepository.findBySurname(surname);
+    }
 }

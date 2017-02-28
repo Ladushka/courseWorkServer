@@ -46,9 +46,19 @@ public class LessonController {
         return new ResponseEntity<>(lessonService.findByGroup(group_id), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/lecturer/{lecturer_id}", method = RequestMethod.GET)
+    public ResponseEntity<List<Lesson>> getByLecturer(@PathVariable("lecturer_id") Integer lecturer_id) {
+        return new ResponseEntity<>(lessonService.findByLecturer(lecturer_id), HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/faculty/{faculty}/group/{number}", method = RequestMethod.GET)
     public ResponseEntity<List<Lesson>> findByFacultyAndNumber(@PathVariable("faculty") String faculty, @PathVariable("number") Integer number) {
         return new ResponseEntity<>(lessonService.findByFacultyAndNumber(faculty, number), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/surname/{surname}", method = RequestMethod.GET)
+    public ResponseEntity<List<Lesson>> findByFacultyAndNumber(@PathVariable("surname") String surname) {
+        return new ResponseEntity<>(lessonService.findBySurname(surname), HttpStatus.OK);
     }
 
 

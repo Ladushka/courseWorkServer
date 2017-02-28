@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import schedule.entity.Group;
 import schedule.entity.Lecturer;
 import schedule.service.LectureService;
 
@@ -43,4 +44,11 @@ public class LecturerController {
     public ResponseEntity<Lecturer>get(@PathVariable("login") String login){
         return new ResponseEntity<>(lectureService.findByLogin(login), HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/surname/{surname}", method = RequestMethod.GET)
+    public ResponseEntity<List<Lecturer>> getBySurname(@PathVariable("surname") String surname) {
+        return new ResponseEntity<>(lectureService.findBySurname(surname), HttpStatus.OK);
+    }
+
+
 }

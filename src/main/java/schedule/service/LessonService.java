@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import schedule.entity.Group;
+import schedule.entity.Lecturer;
 import schedule.entity.Lesson;
 import schedule.entity.form.LessonForm;
 import schedule.repository.GroupRepository;
@@ -57,10 +58,23 @@ public class LessonService {
         return lessonRepository.findByGroup(group);
     }
 
+    public List<Lesson> findByLecturer(Integer lecturer_id) {
+        Lecturer lecturer = new Lecturer();
+        lecturer.setLecture_id(lecturer_id);
+        return lessonRepository.findByLecturer(lecturer);
+    }
+
+
     @Transactional
     public List<Lesson> findByFacultyAndNumber(String faculty, Integer number) {
         Optional<Group> optional = groupRepository.findByFacultyAndNumber(faculty, number).stream().findFirst();
         return optional.isPresent() ? lessonRepository.findByGroup(optional.get()) : Collections.emptyList();
+    }
+
+    @Transactional
+    public List<Lesson> findBySurname(String surname) {
+        Optional<Lecturer> optional = lecturerRepository.findBySurname(surname).stream().findFirst();
+        return optional.isPresent() ? lessonRepository.findByLecturer(optional.get()) : Collections.emptyList();
     }
 
 
