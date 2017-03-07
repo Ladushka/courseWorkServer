@@ -68,6 +68,9 @@ public class LessonService {
         return optional.isPresent() ? lessonRepository.findByGroup(optional.get()) : Collections.emptyList();
     }
 
+    public List<Lesson> findByLecturerSurname(String surname) {
+        return lessonRepository.findByLecturerSurname(surname);
+    }
 
 
 }

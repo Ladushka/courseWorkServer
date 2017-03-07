@@ -51,5 +51,10 @@ public class LessonController {
         return new ResponseEntity<>(lessonService.findByFacultyAndNumber(faculty, number), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/surname/{lecturerSurname}", method = RequestMethod.GET)
+    public ResponseEntity<List<Lesson>> findByLecturerSurname(@PathVariable("lecturerSurname") String lecturerSurname) {
+        return new ResponseEntity<>(lessonService.findByLecturerSurname(lecturerSurname), HttpStatus.OK);
+    }
+
 
 }
