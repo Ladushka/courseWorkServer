@@ -9,7 +9,9 @@ public class LessonForm {
 
     private Integer id;
     private String subject_name;
-    private Integer lecture_id;
+    private String lecturerSurname;
+    private String lecturerName;
+    private String lecturerPatronymic;
     private Integer group_id;
     private String day_of_week;
     private Integer number_of_lesson;
@@ -33,12 +35,28 @@ public class LessonForm {
         this.subject_name = subject_name;
     }
 
-    public Integer getLecture_id() {
-        return lecture_id;
+    public String getLecturerSurname() {
+        return lecturerSurname;
     }
 
-    public void setLecture_id(Integer lecture_id) {
-        this.lecture_id = lecture_id;
+    public void setLecturerSurname(String lecturerSurname) {
+        this.lecturerSurname = lecturerSurname;
+    }
+
+    public String getLecturerName() {
+        return lecturerName;
+    }
+
+    public void setLecturerName(String lecturerName) {
+        this.lecturerName = lecturerName;
+    }
+
+    public String getLecturerPatronymic() {
+        return lecturerPatronymic;
+    }
+
+    public void setLecturerPatronymic(String lecturerPatronymic) {
+        this.lecturerPatronymic = lecturerPatronymic;
     }
 
     public Integer getGroup_id() {

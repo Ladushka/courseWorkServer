@@ -17,9 +17,14 @@ public class Lesson {
     @Column(name = "subject_name",nullable = false)
     private String subject_name;
 
-    @ManyToOne
-    @JoinColumn(name = "lecture_id", nullable = false)
-    private Lecturer lecturer;
+    @Column(name = "lecturer_surname", nullable = false)
+    private String lecturerSurname;
+
+    @Column(name = "lecturer_name", nullable = false)
+    private String lecturerName;
+
+    @Column(name = "lecturer_patronymic", nullable = false)
+    private String lecturerPatronymic;
 
     @ManyToOne
     @JoinColumn(name = "group_id",nullable = false)
@@ -56,7 +61,29 @@ public class Lesson {
         this.subject_name = subject_name;
     }
 
+    public String getLecturerSurname() {
+        return lecturerSurname;
+    }
 
+    public void setLecturerSurname(String lecturerSurname) {
+        this.lecturerSurname = lecturerSurname;
+    }
+
+    public String getLecturerName() {
+        return lecturerName;
+    }
+
+    public void setLecturerName(String lecturerName) {
+        this.lecturerName = lecturerName;
+    }
+
+    public String getLecturerPatronymic() {
+        return lecturerPatronymic;
+    }
+
+    public void setLecturerPatronymic(String lecturerPatronymic) {
+        this.lecturerPatronymic = lecturerPatronymic;
+    }
 
     public String getDay_of_week() {
         return day_of_week;
@@ -90,13 +117,7 @@ public class Lesson {
         this.type = type;
     }
 
-    public Lecturer getLecturer() {
-        return lecturer;
-    }
 
-    public void setLecturer(Lecturer lecturer) {
-        this.lecturer = lecturer;
-    }
 
     public Group getGroup() {
         return group;

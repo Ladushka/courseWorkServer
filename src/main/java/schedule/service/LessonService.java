@@ -30,7 +30,10 @@ public class LessonService {
         Lesson lesson = new Lesson();
         lesson.setId(lessonForm.getId());
         lesson.setSubject_name(lessonForm.getSubject_name());
-        lesson.setLecturer(lecturerRepository.findOne(lessonForm.getLecture_id()));
+        lesson.setLecturerName(lessonForm.getLecturerName());
+        lesson.setLecturerSurname(lessonForm.getLecturerSurname());
+        lesson.setLecturerPatronymic(lessonForm.getLecturerPatronymic());
+        //lesson.setLecturer(lecturerRepository.findOne(lessonForm.getLecture_id()));
         lesson.setDay_of_week(lessonForm.getDay_of_week());
         lesson.setNumber_of_lesson(lessonForm.getNumber_of_lesson());
         lesson.setGroup(groupRepository.findOne(lessonForm.getGroup_id()));
@@ -58,12 +61,6 @@ public class LessonService {
         return lessonRepository.findByGroup(group);
     }
 
-    public List<Lesson> findByLecturer(Integer lecturer_id) {
-        Lecturer lecturer = new Lecturer();
-        lecturer.setLecture_id(lecturer_id);
-        return lessonRepository.findByLecturer(lecturer);
-    }
-
 
     @Transactional
     public List<Lesson> findByFacultyAndNumber(String faculty, Integer number) {
@@ -71,11 +68,6 @@ public class LessonService {
         return optional.isPresent() ? lessonRepository.findByGroup(optional.get()) : Collections.emptyList();
     }
 
-    @Transactional
-    public List<Lesson> findBySurname(String surname) {
-        Optional<Lecturer> optional = lecturerRepository.findBySurname(surname).stream().findFirst();
-        return optional.isPresent() ? lessonRepository.findByLecturer(optional.get()) : Collections.emptyList();
-    }
 
 
 }

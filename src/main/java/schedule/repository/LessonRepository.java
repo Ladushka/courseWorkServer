@@ -12,7 +12,6 @@ import java.util.List;
 
 public interface LessonRepository extends JpaRepository<Lesson, Integer> {
     List<Lesson> findByGroup(Group group_id);
-    List<Lesson> findByLecturer(Lecturer lecture_id);
 
 
    // @Query("SELECT l FROM Lesson l LEFT JOIN Group g ON l.group_id = g.group_id WHERE g.number = :number AND g.faculty = :faculty")
