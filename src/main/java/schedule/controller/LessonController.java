@@ -56,5 +56,15 @@ public class LessonController {
         return new ResponseEntity<>(lessonService.findByLecturerSurname(lecturerSurname), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/dayOfWeek/{dayOfWeek}/{numberOfLesson}", method = RequestMethod.GET)
+    public ResponseEntity<List<Lesson>> findByDayOfWeekAndNumberOfLesson(@PathVariable("dayOfWeek") String day_of_week, @PathVariable("numberOfLesson") Integer numberOfLesson) {
+        return new ResponseEntity<>(lessonService.findByDayOfWeekAndNumberOfLesson(day_of_week, numberOfLesson), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/dayOfWeek/{dayOfWeek}/{numberOfLesson}/{group_id}", method = RequestMethod.GET)
+    public ResponseEntity<List<Lesson>> findByGroupAndDayOfWeekAndNumberOfLesson(@PathVariable("dayOfWeek") String day, @PathVariable("numberOfLesson") Integer number, @PathVariable("group_id") Integer group) {
+        return new ResponseEntity<>(lessonService.findByGroupAndDayOfWeekAndNumberOfLesson(number, day, group), HttpStatus.OK);
+    }
+
 
 }

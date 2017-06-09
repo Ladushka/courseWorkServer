@@ -14,7 +14,8 @@ import java.util.List;
 public interface LessonRepository extends JpaRepository<Lesson, Integer> {
     List<Lesson> findByGroup(Group group_id);
     List<Lesson> findByLecturerSurname(String surname);
+    List<Lesson> findByDayOfWeekAndNumberOfLesson(String day_of_week, Integer numberOfLesson);
 
-   // @Query("SELECT l FROM Lesson l LEFT JOIN Group g ON l.group_id = g.group_id WHERE g.number = :number AND g.faculty = :faculty")
-   // List<Lesson> findByGroupAndFaculty(@Param("number") Integer number, @Param("faculty") String faculty);
+    @Query("SELECT l FROM Lesson l WHERE l.dayOfWeek = :day AND l.numberOfLesson = :number AND l.group.group_id = :group")
+    List<Lesson> findByGroupAndDayOfWeekAndNumberOfLesson(@Param("number") Integer number, @Param("day") String day, @Param("group") Integer group);
 }

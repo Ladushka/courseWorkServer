@@ -13,8 +13,8 @@ public class LessonForm {
     private String lecturerName;
     private String lecturerPatronymic;
     private Integer group_id;
-    private String day_of_week;
-    private Integer number_of_lesson;
+    private String dayOfWeek;
+    private Integer numberOfLesson;
     private String lecture_hall;
     private String type;
     private Integer subgroup;
@@ -67,20 +67,20 @@ public class LessonForm {
         this.group_id = group_id;
     }
 
-    public String getDay_of_week() {
-        return day_of_week;
+    public String getDayOfWeek() {
+        return dayOfWeek;
     }
 
-    public void setDay_of_week(String day_of_week) {
-        this.day_of_week = day_of_week;
+    public void setDayOfWeek(String dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
     }
 
-    public Integer getNumber_of_lesson() {
-        return number_of_lesson;
+    public Integer getNumberOfLesson() {
+        return numberOfLesson;
     }
 
-    public void setNumber_of_lesson(Integer number_of_lesson) {
-        this.number_of_lesson = number_of_lesson;
+    public void setNumberOfLesson(Integer numberOfLesson) {
+        this.numberOfLesson = numberOfLesson;
     }
 
     public String getLecture_hall() {

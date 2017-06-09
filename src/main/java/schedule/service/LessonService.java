@@ -34,8 +34,8 @@ public class LessonService {
         lesson.setLecturerSurname(lessonForm.getLecturerSurname());
         lesson.setLecturerPatronymic(lessonForm.getLecturerPatronymic());
         //lesson.setLecturer(lecturerRepository.findOne(lessonForm.getLecture_id()));
-        lesson.setDay_of_week(lessonForm.getDay_of_week());
-        lesson.setNumber_of_lesson(lessonForm.getNumber_of_lesson());
+        lesson.setDayOfWeek(lessonForm.getDayOfWeek());
+        lesson.setNumberOfLesson(lessonForm.getNumberOfLesson());
         lesson.setGroup(groupRepository.findOne(lessonForm.getGroup_id()));
         lesson.setLecture_hall(lessonForm.getLecture_hall());
         lesson.setType(lessonForm.getType());
@@ -61,6 +61,10 @@ public class LessonService {
         return lessonRepository.findByGroup(group);
     }
 
+    public List<Lesson> findByDayOfWeekAndNumberOfLesson(String day_of_week, Integer numberOfLesson) {
+        return lessonRepository.findByDayOfWeekAndNumberOfLesson(day_of_week, numberOfLesson);
+    }
+
 
     @Transactional
     public List<Lesson> findByFacultyAndNumber(String faculty, Integer number) {
@@ -68,8 +72,19 @@ public class LessonService {
         return optional.isPresent() ? lessonRepository.findByGroup(optional.get()) : Collections.emptyList();
     }
 
+//    @Transactional
+//    public List<Lesson> findByFacultyAndNumberAndDayOfWeek(String faculty, Integer number,String dayOfWeek) {
+//        List<Lesson> optional = findByFacultyAndNumber(faculty, number);
+//        return optional.isPresent() ? lessonRepository.findByGroup(optional.get()) : Collections.emptyList();
+//    }
+
+
     public List<Lesson> findByLecturerSurname(String surname) {
         return lessonRepository.findByLecturerSurname(surname);
+    }
+
+    public List<Lesson> findByGroupAndDayOfWeekAndNumberOfLesson(Integer number, String day, Integer group) {
+        return lessonRepository.findByGroupAndDayOfWeekAndNumberOfLesson(number, day, group);
     }
 
 
